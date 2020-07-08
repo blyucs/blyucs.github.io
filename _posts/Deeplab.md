@@ -1,0 +1,8 @@
+经典的DEEPLAB 系列： 
+
+DeepLab is a state-of-art deep learning model for semantic image segmentation, where the goal is to assign semantic labels (e.g., person, dog, cat and so on) to every pixel in the input image. Current implementation includes the following features:
+
+1. DeepLabv1 [1]: We use *atrous     convolution* to explicitly control the     resolution at which feature responses are computed within Deep     Convolutional Neural Networks.
+2. DeepLabv2 [2]: We use *atrous     spatial pyramid pooling* (ASPP) to robustly     segment objects at multiple scales with filters at multiple sampling rates     and effective fields-of-views.
+3. DeepLabv3 [3]: We augment the ASPP module with *image-level feature* [5, 6] to capture longer range information. We     also include *batch normalization* [7] parameters to facilitate the training. In     particular, we applying atrous convolution to extract output features at     different output strides during training and evaluation, which efficiently     enables training BN at output stride = 16 and attains a high performance     at output stride = 8 during evaluation.
+4. DeepLabv3+ [4]: We extend DeepLabv3 to include a simple yet     effective decoder module to refine the segmentation results especially     along object boundaries. Furthermore, in this encoder-decoder structure     one can arbitrarily control the resolution of extracted encoder features     by atrous convolution to trade-off precision and runtime.  
