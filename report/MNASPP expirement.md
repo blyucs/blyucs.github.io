@@ -224,9 +224,88 @@ pareto_delay
 
 2020.08.14：
 
-1. 对972 ， 0.29 M 模型进行 only task1 摸底， 获得了 94.5. 打算把task 0 和  KD 加上 试试，。  0814T1033
+1. 82 环境： 对972 ， 0.29 M 模型进行 only task1 摸底， 获得了 94.5. 
+2. 82 环境：打算把task 0 和  KD 加上 试试，。  0814T1033---没有成功， GPU环境好像挂了 。
+
+2. 19 环境：训练 9，1，0，10，3，4，0，3，9 .。 架构， loss 为0.27 ， 尚未测试。
+
+
+
+2020.08.18 ：
+
+1. 绘制采样图，
+2. 把82 上面的代码同步到19 中， 进行测试用。 
+3. 82 上面训练架构：  **2，0，1，2，7，4，2，9，9（para -0.6 972 ） ** 94.5
+![image-20200820154612482](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20200820154612482.png)
+5. 19 上面训练：   **9，1，0，10，3，4，0，3，9 . （ para -0.3 456）**  -- 94.7
+
+![image-20200820154702612](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20200820154702612.png)
+
+
+
+2020.08.19：
+
+
+
+1.  从pareto 曲线中的点的颜色可以看出，更加优秀的架构是在一定的搜索迭代后才omit 出来的，这也进一步证明了搜索过程的有效性和必要性
+
+2020.08.20
+
+1. 19 ： flops - 805， 3，[0，0，10，3]，[3，3，10，9]     87.5/82.4/94.3
+
+![image-20200822160738233](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20200822160738233.png)
+
+1. 82:   flops -653 ,  0,[1,0,3,7],[4,1,2,0]   88.4/84.8/94.7
+
+![image-20200822160641588](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20200822160641588.png)
+
+
+
+2020.08.21：
+
+1. 19 ： delay --980  --- **0.24** ： 9 [1，0，5，9]， [4，1，1，1]，  
+
+   ![image-20200822160923976](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20200822160923976.png)
+
+2. 82. delay --**0.3**： 9，[1,0,1,3],[4,0,1,1]    
+
+![image-20200822183548730](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20200822183548730.png)
+
+
+
+2020.08.22:
+
+1.  19 ： delay --980  --- **0.24** ： 9 [1，0，5，9]， [4，1，1，1]，    ----  考虑不使用  上采样的方式， 直接训练
+
+0822T1634 得到 0.21 的loss 值， 测试结果： 83.8/81.0/ 93.9  证明end-to-end 确实差别很大
+
+
+
+2. 进行batch training
+
+2020.08.23：
+
+1. batch training without kd   ， **在达到一定量的数据量下， 似乎， 有没有kd 都没有什么区别 。 好坏架构也不太区别得出来。 。。。。 ？???**   -----通过采样的架构的对比训练， 似乎， KD 并没有太大的好处。 但是two-stage 确实有更好的效果。
+
+   **two-stage with kd 和  without kd 对比， 相同的epoch。** 
+
+2. original_batch_training_validate   ： **也是用预训练模型**， 只是不采用pre-computing 和  two-stage 。 
+    original  （with pre-trianed encoder ） 同 two stage without KD 的对比， 排除KD 的干扰。 
+
+2020.08.25:
+
+1..  type EG1800  ,   type-=  train, 有预训练模型， 不做two-stage训练， 只做train_segmenter. 可以正常训练 ， loss 值很低  0.08。 测试 92.9 ？？？
+
+**但是测试的时候  512 ！= 800 不匹配。**  ---- 用resize 来解决。
+
+2.   type EG1800  ,   type -=  search （not-end-to-end ）, 有预训练模型， 不做two-stage训练， 只做train_segmenter  --- 只有 69%的效果。
 
 
 
 
 
+2020.08.26：
+
+1. type = search  先进行stage 0  -  再stage 1 似乎效果很差， 可能和预训练模型有关， 预训练后， 再经过调整，反而调坏了。 
+2. 直接只使用pre-trained + stage  0 ， type =  search ， resize 。  ---  直接过拟合（数据量太少了）。  loss 值很低， 但是表现不佳，80.7 . 
+3. 直接 **no  pre-trained** + stage  1， type =  **train**， resize 。 相比于92.9 的， 没有使用pre-trianed model 。     ----  选了一个0.1 loss 值的架构来测试， 只有 80.4 ， 直观效果也很差， 是否是batch-size 为2 太小了。 

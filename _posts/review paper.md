@@ -239,6 +239,24 @@ mine：major +  cite
 
 
 
+Data collection 
+
+1. The motivation for this article is meaningful and technically sound. But before the acception, I suggested much more work should be done or revision:
+   1. The description of the process of the Sina Weibo's data collection approach, such as detection bypassing, proxy, etc. can weaken, for it has nothing to do with the scientific research and experimental demonstration.
+   2. F-score would be more accurate if it is described as F1-score.
+   3. In the model, the ablation effect of BiGRU Block, Resnet Block, and the Attention layer is suggested to be conducted.
+   4. It is suggested to quote some recent research progress related to deep learning, such as:
+       [1] Structural property-aware multilayer network embedding for latent factor analysis, Pattern Recognition, vol. 76, pp. 228-241, 2018. 
+       [2] Multi-label image classification via feature/label co-projection, IEEE Transactions on Systems, Man and Cybernetics: Systems, DOI: 10.1109/TSMC.2020.2967071
+   5. Most of the current comparative experiments are traditional machine learning methods. Are there any comparisons between deep learning or reinforcement learning methods from other papers? (As described in the relevant work, DQL) 
+
+
+
+
+The motivation for this article is meaningful and technically sound. The ideas are innovative. The experimental ideas in this article are clear and the writing is methodical. But before the acception, I suggested much more work should be done or revision, as the evaluation submitted to the author. 
+
+
+
 
 
 盾构机：  mine   reject   others： yuanhang
@@ -281,9 +299,10 @@ What do "it is its own explanation" and "the best explanation of a simple model 
 
 \5. In order to find out the significant differences between the results of the compared  algorithms, the comparative analysis should contain more tests of statistical significance (e.g. Fredman and Iman-Davenport test). Not too clear mention of one test (McNemar test) is not enough.
 
-
 Minor comments:
 \1. For the convenience of reviewers, figures should be included in the text with appropriate descriptions (near the references).
+
+
 
 
 
@@ -358,4 +377,152 @@ In this article, most of the content was introducing the basic methods of deep l
 #### Recipe Suggestion and Generation using Bi-directional LSTMs based Ensemble of Recurrent Neural Networks and Variational Autoencoders
 
 应用文章
+
+
+
+2020.08.26 
+
+Fault detection in gears using fault samples enlarged by combination of numerical simulation and generative adversarial network
+
+带确定是否送审--- wenzhou 
+
+
+
+Adaboost-based reinforcement integration framework coupled two-stage feature extraction with deep learning for multivariate exchange rate prediction
+
+
+
+
+
+DNN-DTIs: improved drug-target interactions prediction using XGBoost feature selection and deep neural network
+
+药物靶向预测，    青岛科技大学。 
+
+
+
+
+
+Astrologer: Exploiting Graph Neural Hawkes Process for Event Propagation Prediction with Spatio-temporal Characteristics
+
+送审。。。 不懂
+
+
+
+
+
+A Modified Convolutional Neural Network for Imbalanced Data Classification
+
+拟reject 。 --- 台湾  损失函数的设计或者一些trick 。    
+
+Dear Author:
+    For this manuscript, we do not think that simple improvements of the loss functions and the application of the training tricks on the basic classification task are sufficiently innovative to be published on this journal. It is suggested that more work be added or resubmitted to other types of journals.
+
+
+
+
+
+A Comprehensive Comparison of Meta-heuristics and Neural Network 
+Approaches for Streamflow Time Series Forecasting 
+
+拟 reject   过多的方法对比，介绍 ，? 神经网络的应用。 
+
+Dear Author：
+    After the preliminary reading and evaluation of the article, we found that a large amount of this paper is devoted to the introduction of various methods, and finally it is proposed that the method of deep neural network will result in better performance on Streamflow Time Series Forecasting task. We think that the innovation of this paper is not enough. Considering this, it is not suitable to be publish on KBS.  Thank you for your submitting. 
+
+
+
+**Modeling of Cutting Parameters in Turning of PEEK Composite Using Artificial Neural Networks and Adaptive Neural Fuzzy Inference Systems**
+
+应用文章， 拟reject 
+
+
+
+
+
+ **Rule-based Reinforcement Learning Methodology to Inform Stochastic Algorithms for Constrained Optimization** 
+
+--  强化学习， MIT 送审
+
+
+
+ Unsupervised feature selection via transformed auto-encoder 
+
+--- 福州大学， 拟送审
+
+
+
+SMANN: A Segmented Memory-augmented Neural Network Using Sparsity Projection for Long-term Memorization
+
+short communication  
+
+
+
+
+
+Role-based Network Embedding via Structural Features Reconstruction with Degree-regularized Constraint
+
+
+
+How to Select Deep Learning Networks for Image Classification
+
+Dear Editor:
+    This paper is devoted to the experimental comparison of popular deep neural network structures. It is more like a research review or experimental report, and we think its research value is ambiguous. At the same time, no innovative ideas were put forward. It is not suitable for our journal.
+
+
+
+#### Development of a Lévy Flight and FDB-Based Coyote Optimization Algorithm for Global Optimization and Real-World ACOPF Problems
+
+​    Please check it carefully that some pertinent suggestions have been put forward by reviewers, which is very helpful to improve the quality of your manuscript. In addition, we regret to inform you that we must terminate your submission process and suggest that you try another journal or conference. Thanks.  
+
+
+
+
+
+2020.09.08
+
+#### Chart Classification Based on Structural Variation Features Using Convolutional Neural Network
+
+图表分类， 没有任何创新点。 仅应用。 
+
+
+
+
+
+#### Forecasting Precious Metal Price using a Multiscale based Convolutional Neural Network Model
+
+首先用VMD 模型从曲线中提取特征， 然后用CNN 来进行非线性建模， 预测价格。 
+
+
+
+#### Intelligent Human Action Recognition Using an Ensemble Model of Evolving Deep Networks with Swarm-based Optimization
+
+BI-LSTM   可以送审。 
+
+
+
+#### STGSN - A Spatial-Temporal Graph Neural Network Framework for Time-Evolving Social Networks    --- 电子科技大学  qingke 
+
+1. 犯罪网络分析， 社交网络分析，  图神经网络，  时空图网络，  注意力机制。 
+2. 利用图网络对空间 （相互关系） 来进行建模， embedding   
+3. 利用时空网络（多头注意力机制）来对不同时间进行建模 。
+
+1. 针对网络模型和实验i结果， 结果缺少基本的理论分析和解释 。
+2. 针对多头注意力机制和单头注意力机制效果基本一致的情况。 是否有原因分析 ？  
+3. 是否考虑了针对消融实验的设计。 例如不采用注意力机制的
+4. 在4.1 中，我没有找到关于metric 的描述。 
+
+
+
+#### Hierarchical Recurrent Neural Networks for Graph Generation
+
+---- 送审lyubo
+
+
+
+A big data system for driving performance evaluation system with unsupervised
+ learning from bi-level distribution mixture of interpretable features
+
+--- reject  应用型
+
+
 
