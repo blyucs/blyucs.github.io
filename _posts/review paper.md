@@ -526,3 +526,102 @@ A big data system for driving performance evaluation system with unsupervised
 
 
 
+ Dilated Convolutional High-Resolution Network for Crowd Countin  
+
+
+
+desk reject 
+
+
+
+Dear editor: 
+   I’ve found that this article's similarity check rate reaches to 39%,  and it has a high degree of similarity to another published article. I suggest the desk reject.
+
+Dear author: 
+   I’ve found that this article's similarity check rate reaches to 39%,  and it has a high degree of similarity to another published article.  Please carefully check your writing details.
+
+
+
+​    I’ve found that this article's similarity check rate reaches to 35%,  and my preliminary review reveals some duplicate paragraphs.  Please carefully check your writing details.
+
+
+
+####  Information Aggregation and Fusion in Deep Neural Networks for Object Interaction Exploration for Semantic Segmentation 
+
+---   北京交通大学   同已reject 的文章 摘要相似度高， 粗略看是语义分割的， 貌似创新一般。 拟reject 。 
+
+#### Dilated Convolutional High-Resolution Network for Crowd Counting
+
+--- reject 
+
+#### Fast Modular Assembler Encoding: Evolving Modular Neural Networks of fixed modular architecture
+
+-- 送审 
+
+####  High-resolution convolutional neural networks for point clouds with space decomposition kernel 
+
+---- HRNET+ SDK conv 
+
+
+
+#### Cyberbullying Classification with Neural Networks
+
+Dear author：
+      This paper is devoted to the Cyberbullying Classification with Neural Networks. The topic do make sense. But it is more like a research review or experimental report, and we think its research value is ambiguous. At the same time, no innovative ideas were put forward. It is not suitable for our journal.  Sorry to suggest the reject.
+
+
+
+####  Representation learning using Attention Network and CNN for Heterogeneous networks 
+
+-- 浙江工业大学，  拟送审 ，GCN  +  attention
+
+
+
+#### Differences First in Asymmetric Brain: A Bi-hemisphere Discrepancy Convolutional Neural Network for EEG Emotion Recognition
+
+--- reject 
+
+#### Research on Imbalanced Data Classification Based on Classroom-like Generative Adversarial Networks
+
+-- 送审 
+
+
+
+#### Deep Learning Based Extractive Text summarization with Word-Level Attention Mechanism
+
+-- reject 。
+
+
+
+#### A synchronous prediction model based on multi-channel CNN with moving window for coal and electricity consumption in cement calcining process
+
+--- 创新一般。 
+
+
+
+#### Fusion of convolution neural network, support vector machine and Sobel filter for accurate detection of COVID-19 patients using X-ray images
+
+
+
+
+
+ This work focuses on many-objective optimisation problems and proposes a co-guided evolutionary algorithm by combining merits of dominance and decomposition, in which an elitism mechanism based on the cascading sort is exploited to balance the convergence and diversity of evolutionary process. Also, a reference point adaptation method is designed to adapt different Pareto Fronts. This is quite an interesting and valuable topic in related areas. However, some aspects need to be improved.
+
+My detailed comments are as follows:
+\1. On the title:
+As mentioned in the statement of main contributions, this study utilizes both dominance-based and decomposition-based approaches to balance the convergence and diversity of the evolutionary process. However, only one is included in the title, as A Dominance-based Many-objective Evolutionary Algorithm With Reference Point Adaptation. In my opinion, it cloud be better to get most of your contributions revealed by the title.
+\2. On the Motivation:
+As a reader, the current Motivation is not that satisfactory. Please revise this part to convince readers that all your contributions/improvements are necessary and reasonable.
+\3. On the Experiment:
+1) The selection criterion of algorithms to compare is missing. Moreover, no algorithm later than 2018 gets selected. But, some algorithms released within two years, which means those are newer, get covered by the authors' literature review, not to mention others that can be easily found from well-known journals. Please add more discussion on this.
+2) Detailed experimental studies are expected, including (1) the parameter study since authors claimed that "The proposed algorithm does not contain sensitive parameters and has promising versatility in MaOPs optimization with various PF" in the 3rd contribution; (2) experiments that can prove the effectiveness of each contribution, making the study complete and also comprehensive.
+\3. Grammatical mistakes and typos:
+Please carefully conduct proofreading and correct grammatical mistakes and typos, e.g., section title "Detailed implementations", given that "implementation" is a mass noun. 
+
+
+
+AE: This article is a re-submission as a new paper, but the duplication check result with the former rejected paper is of 95%,  for the KBS rules “any rejected papers must make >50% changes for re-submission as a new paper.” I suggest the desk reject.
+
+AE: This article is a re-submission as a new paper, but the duplication check result with the former rejected paper is of 91%. For the submission rules of KBS, I suggest the desk reject.
+
+AE: This article is a re-submission as a new paper, but the duplication check result of abstact with the former rejected paper is of 95%.In addition, From my pre-review of this article and the former submission,  I found no enough revise.  I suggest the desk reject. 

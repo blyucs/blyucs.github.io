@@ -72,3 +72,137 @@
 1. 解决各种问题
 2. 修改搜索空间，增加类似MNASnet 的 SENET  注意力机制
 
+
+
+
+
+2020.10.26：
+
+1. 确认0.01 是否是乌龙事件， 
+2. 改变编码方式，， 把一个卷积核（宽度和channel 数）， 和深度， 编码在一起， 建立前后联系。 用LSTM 模型。
+3. 改变数据集用    对最重要的深度数据用手动轮询   的方式 来。强化数据集的分布情况。 
+4. 整理合并代码， 上库。  
+
+
+
+2020.11.23：
+
+1. 整理考试资料 
+
+2. 将现有代码上库： 
+
+   **UNET：**
+
+   1）处理数据集：按照官网的方式，相关修改代码已上库。
+
+   - Move the mask folder, the image folder, and `CelebA-HQ-to-CelebA-mapping.txt` ( remove 1st line in advance ) under `./Data_preprocessing`
+   - Run `python g_mask.py`
+   - Run `python g_partition.py` to split train set and test set.
+
+   2）使用的是**celebA 数据集**中带的源码 ？？？ 
+
+    3) 使用预训练的模型 可以达到 94.7 ， 且 眼睛/眉毛等细节的分割很好。 **88.8/85.3 , 可以看出nas-seg 没有end-to-end的进行upsample  是有问题的。** UNET 参数量和运算量很大，但是效果不错。 
+
+   4） 进行了训练调试。可以正常训练。**但未做测试？？？？** 
+
+   **DEEPLAB-V3-MBV3：**
+
+   1）  **代码适配了EG1800,和 HELEN** ,  代码比较乱。 测试时只能输入正方形图像。训练没有问题，测试有问题。 训练时loss 值降不下来， 预测效果不好 。 
+
+   **WACV：**
+
+   1）新来阿德莱德的代码 调试。   --- 待进行。 
+
+3. NASPP-release 待整理  ，上库
+
+   开一个新库， 用于release 
+
+   ----------------- 所有的东西待整理上库备份，修改发布代码， response letter ， 论文相关修改 。 
+
+   
+
+   
+
+   2020.11.23（星期一）：
+
+   1. 考虑开题的事情， 同Pref wen 讨论 ， 是否往动力学靠。
+
+   2020.11.24:
+
+   1. 联系ouyangdeqiang ， 
+
+   2. 考试
+
+   2020.11.25：
+
+   1. 准备考试
+
+   2. CPW,  专利。。 
+
+      
+
+   2020.11.26
+
+   1. 起草了三个大论文题目/方向 
+   2. 跑通了GraphNAS 的训练代码， 当前cora 的数据集下载存在问题， 待跑通搜索的代码 ，深入研究。 
+   3. GRAPH+NAS 共4篇现有的论文
+
+2020.11.27：
+
+1. 考试    操作系统奇葩题，全部是课后习题 （操作系统精髓）  ， 调度那个题没答案。 
+
+
+
+2020.11.28：
+
+1. 组会     修改NASPP 代码， 
+
+
+
+2020.11.29 ：
+
+1. 计划修改完，转换为jupyter 文件 。 》？？？？、、
+2. 修改response letter 。。。。。 ？？？？
+3. 补充   a, 加入  泛化效果
+
+
+
+2020.11.30 ：
+
+1. jupyter 文件  基本修改完了。 
+2. release 上库发布， 
+3. 计划今日把精度数据补齐。 
+
+
+
+2020.12.1:
+
+1. 精度数据补齐
+2. response letter 补完  --- 
+3. 论文修改： SVHN 
+4. Frame-based Neural Network for Machine Reading Comprehension --- 审稿 
+
+
+
+2020.12.2:
+
+1. 语法矫正， 丰富语气
+
+2020.12.3:
+
+1. train and split 要修改
+2. 标蓝
+3. response letter 要加原文
+
+
+
+2020.12.7：
+
+1. 论文补充修改完。
+2. 传递了matlab 源码程序
+3. 整理了MNASPP的ckpt 文件 ，matlab 代码上库 
+4. 阅读了SGAS 论文。
+5. 重新安排了latency prediction  ， 学习了一下self-attention 
+
+
+
